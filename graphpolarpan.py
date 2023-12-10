@@ -24,7 +24,7 @@ def getControl():
     return df
 
 def getLens():
-    dir_path = f'{freq} GHz/tiltpandata/'
+    dir_path = f'{freq} GHz Data/tiltpandata/'
     file_extension = '.xlsx'
     filenames = [file for file in os.listdir(dir_path)]
     file_list = []

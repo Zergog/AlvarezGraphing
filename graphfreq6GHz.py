@@ -15,7 +15,7 @@ def readfromseventh(filename):
     df = pd.read_csv(filename, skiprows = skip_func)
     return df
 
-dir_path = '6 GHz/'
+dir_path = '6 GHz Data/'
 file_extension = '.csv'
 
 df = readfromseventh(dir_path + "6 GHz 24 cm gain bandwidth.csv")

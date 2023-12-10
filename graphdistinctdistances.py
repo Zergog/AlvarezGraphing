@@ -59,7 +59,7 @@ def createseparationdf(foldername):
     return df
 
 
-dir_path = 'variabledistancedata/'
+dir_path = 'Variable Lens Distance Data/'
 file_extension = '.csv'
 separation_list = []
 foldernames = [folder for folder in os.listdir(dir_path) if folder == "6 cm" or folder == "10 cm" or folder == "14 cm"]

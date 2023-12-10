@@ -13,7 +13,7 @@ import os
 freq = 6
 
 def getControl():
-    dir_path = 'controldata/'
+    dir_path = 'Control Data/'
     file = f'{freq}_tilt_control.xlsx'
     df = pd.read_excel(dir_path + file)
     df = df.rename(columns={f'Angle (deg) - {freq} GHz': 'tilt', f'Amplitude (dB) - {freq} GHz': 'amp'})
@@ -22,7 +22,7 @@ def getControl():
     return df
 
 def getLens():
-    dir_path = f'{freq} GHz/tiltpandata/'
+    dir_path = f'{freq} GHz Data/tiltpandata/'
     file_extension = '.xlsx'
     filenames = [file for file in os.listdir(dir_path)]
     file_list = []

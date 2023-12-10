@@ -24,7 +24,7 @@ def getControlPan():
     return df
 
 def getLensPan():
-    dir_path = f'{freq} GHz/tiltpandata/'
+    dir_path = f'{freq} GHz Data/tiltpandata/'
     file_extension = '.xlsx'
     filenames = [file for file in os.listdir(dir_path)]
     file_list = []
@@ -44,7 +44,7 @@ def getLensPan():
     df = df.sort_values(by=['pan'])
     return df
 def getControlTilt():
-    dir_path = 'controldata/'
+    dir_path = 'Control Data/'
     file = f'{freq}_tilt_control.xlsx'
     df = pd.read_excel(dir_path + file)
     df = df.rename(columns={f'Angle (deg) - {freq} GHz': 'tilt', f'Amplitude (dB) - {freq} GHz': 'amp'})
@@ -53,7 +53,8 @@ def getControlTilt():
     return df
 
 def getLensTilt():
-    dir_path = f'{freq} GHz/tiltpandata/'
+    # Interpolate over pan data files, at central pan with specific tilts.
+    dir_path = f'{freq} GHz Data/tiltpandata/'
     file_extension = '.xlsx'
     filenames = [file for file in os.listdir(dir_path)]
     file_list = []
